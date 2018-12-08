@@ -2,7 +2,7 @@
 Pretty straightforward, this small program allows you to use the magic of Google's "Feeling Lucky" button from the CLI.
 Currently it's only available on Windows, when I figure out a proper way to create it on Linux I'll release Linux version too.
 
-You can either get it from [releases]() or you can build it on your own.
+You can either get it from [releases](https://github.com/tkduman/magic-search/releases) or you can build it on your own.
 
 ## But why?
 
