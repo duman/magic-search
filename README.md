@@ -48,3 +48,8 @@ This opens "https://help.ubuntu.com/stable/ubuntu-help/net-default-browser.html.
 ```
 
 With the results you'll be left satisfied almost always. Again, I'm sorry that Linux version doesn't exist but if I don't forget I'll make it real. (In fact I can make it function almost the same, but it has flaws.)
+
+## Is something wrong?
+Open an issue, I'll try to fix it or help you with your problem. Do you know the solution already? Amazing, go ahead and submit a request.
+
+Have fun.
