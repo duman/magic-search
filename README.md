@@ -6,9 +6,9 @@ You can either get it from [releases](https://github.com/tkduman/magic-search/re
 
 ## But why?
 
-Why not? Let's be real, most of the time what we search for is in the first result. No need to waste our time by looking at other links or opening 8 links in 8 tabs. Magic does it for you, also clicks that button that you have avoided for your entire life.
+Why not? Let's be real, most of the time what we search for is in the first result. No need to waste our time by looking at other links or opening 8 links in 8 tabs just to close them back without looking them. Magic makes it easy for you, also clicks that button that you have avoided for your entire life.
 
-Also on some results if Google thinks that first result isn't the best, it launches the search page instead, so you can choose on your own. Which is very neat. See *Here's a few examples* section for some behavioural examples and how it results.
+On some results if Google thinks that first result isn't the best, it launches the search page instead, so you can choose on your own. Which is very neat. See *Here's a few examples* section for some behavioural examples and how it results.
 
 ## How does it work?
 
