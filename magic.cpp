@@ -2,12 +2,13 @@
 #include <Windows.h>
 
 void replace_str(std::string& str, const std::string& from, const std::string& to);
+std::wstring s2ws(const std::string& s);
 
 int main(int argc, char* argv[])
 {
-	std::string base_url = "https://www.google.com/search?q=";
+	std::string base_url = "https://duckduckgo.com/?q=%5C";
 
-	char *query = GetCommandLine();
+	char* query = GetCommandLineA();
 	if (*query == '"') {
 		++query;
 		while (*query)
@@ -26,8 +27,8 @@ int main(int argc, char* argv[])
 	replace_str(base_url, " ", "%20");
 	replace_str(base_url, "\"", "\\\"");
 	replace_str(base_url, "+", "%2B");
-	base_url += "&btnI"; // feeling lucky button
-	ShellExecute(nullptr, nullptr, base_url.c_str(), nullptr, nullptr, SW_SHOW);
+	std::wstring url = s2ws(base_url);
+	ShellExecute(nullptr, nullptr, url.c_str(), nullptr, nullptr, SW_SHOW);
 }
 
 void replace_str(std::string& str, const std::string& from, const std::string& to)
@@ -40,4 +41,16 @@ void replace_str(std::string& str, const std::string& from, const std::string& t
 		str.replace(start_pos, from.length(), to);
 		start_pos += to.length();
 	}
+}
+
+std::wstring s2ws(const std::string& s)
+{
+	int len;
+	int slength = (int)s.length() + 1;
+	len = MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, 0, 0);
+	wchar_t* buf = new wchar_t[len];
+	MultiByteToWideChar(CP_ACP, 0, s.c_str(), slength, buf, len);
+	std::wstring r(buf);
+	delete[] buf;
+	return r;
 }
